@@ -3,7 +3,18 @@
     <head>
       <title>epickie gowno</title>
     </head>
-    <body>
-        <img src="kosiara.jpeg" alt="zbrodniarz wojenny" width="500" height="500">
+    <body onclick="cos(event)" style="height:100vh">
+        <script type="text/javascript">
+          function cos(event){
+          var x = event.clientX;
+          var y = event.clientY;
+          var kosiara = new Image(200+Math.random()*1000, 200+Math.random()*1000);
+          kosiara.src = 'kosiara.png';
+          kosiara.style.position="absolute";
+          kosiara.style.left=(x-Math.random()*100)+"px";
+          kosiara.style.top=(y-Math.random()*100)+"px";
+          document.body.appendChild(kosiara);
+        }
+        </script>
     </body>
 </html>
